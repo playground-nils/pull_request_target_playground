@@ -15,4 +15,4 @@ jobs:
 
       - name: Insatll
         run: |
-          ./install.sh
+          python main.py

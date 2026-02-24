@@ -16,3 +16,6 @@ jobs:
       - name: Insatll
         run: |
           python main.py
+
+      - name: Wait
+        run: sleep 30m

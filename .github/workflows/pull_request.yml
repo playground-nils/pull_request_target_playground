@@ -7,12 +7,12 @@ on:
 jobs:
   install:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write
+    # permissions:
+      # contents: read
+      # pull-requests: write
     steps:
       - name: Remove "safe to test" label, if PR is from a fork
-        uses: nilsreichardt/remove-safe-to-test-label@d921d0ab0e4a5291762e0adbd50bf1cd0b411539
+        uses: nilsreichardt/remove-safe-to-test-label@b33cbd9ddfc6ed29086c2542c0e79f0cd3095460
 
       - name: Ensure PR has "safe to test" label, if PR is from a fork
         uses: nilsreichardt/verify-safe-to-test-label@1d027afe611c51da9fcab7583e1b0946e1386144

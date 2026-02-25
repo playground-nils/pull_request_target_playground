@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Remove "safe to test" label, if PR is from a fork
-        uses: nilsreichardt/remove-safe-to-test-label@0a57536fd060d0ab87f100745b5bb96b6301588c
+        uses: nilsreichardt/remove-safe-to-test-label@76525f0cc2db129f204e94cc28d3e865e815753f
 
       - name: Ensure PR has "safe to test" label, if PR is from a fork
         uses: nilsreichardt/verify-safe-to-test-label@bf23206df73cefc6c47aec20af24938b5665f78f

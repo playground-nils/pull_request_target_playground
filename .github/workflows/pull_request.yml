@@ -8,7 +8,7 @@ jobs:
   install:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      # contents: read
       pull-requests: write
     steps:
       - name: Ensure PR has "safe to test" label, if PR is from a fork

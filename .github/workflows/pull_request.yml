@@ -12,7 +12,7 @@ jobs:
       pull-requests: write
     steps:
       - name: Ensure PR has "safe to test" label, if PR is from a fork
-        uses: nilsreichardt/verify-safe-to-test-label@b4dbef777ea67b29d398bb628b8c8e3bb94b8416
+        uses: nilsreichardt/verify-safe-to-test-label@7063da26ade579ccfc60b6a6d09e37302dcafa61
     
       - name: Checkout base code
         uses: actions/checkout@v5

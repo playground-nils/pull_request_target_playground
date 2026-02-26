@@ -12,10 +12,10 @@ jobs:
       pull-requests: write
     steps:
       - name: Remove "safe to test" label, if PR is from a fork
-        uses: nilsreichardt/remove-safe-to-test-label@fa5ba56bf90708077fe7e65b50034d4c0a3ca532
+        uses: nilsreichardt/remove-safe-to-test-label@629b78e2057e150e0e59fe7a7b71b528446a6dc0
 
       - name: Ensure PR has "safe to test" label, if PR is from a fork
-        uses: nilsreichardt/verify-safe-to-test-label@1d027afe611c51da9fcab7583e1b0946e1386144
+        uses: nilsreichardt/verify-safe-to-test-label@e6441d8c453b7b9820ef4b70c82aa1d4bce9ac29
     
       - name: Checkout base code
         uses: actions/checkout@v5

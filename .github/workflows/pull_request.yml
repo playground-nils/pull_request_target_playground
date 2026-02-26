@@ -5,15 +5,20 @@ on:
     types: [opened, synchronize, reopened, labeled]
 
 jobs:
-  install:
+  authenticate:
     runs-on: ubuntu-latest
     permissions:
-      # contents: read
       pull-requests: write
     steps:
       - name: Ensure PR has "safe to test" label, if PR is from a fork
         uses: nilsreichardt/verify-safe-to-test-label@d99b8b2019308188eb7c0f332f9ab02932f58cc8
-    
+
+  install:
+    needs: authenticate
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
       - name: Checkout base code
         uses: actions/checkout@v5
         with:

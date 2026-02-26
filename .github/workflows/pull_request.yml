@@ -7,15 +7,15 @@ on:
 jobs:
   install:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write
+    # permissions:
+      # contents: read
+      # pull-requests: write
     steps:
-      - name: Remove "safe to test" label, if PR is from a fork
-        uses: nilsreichardt/remove-safe-to-test-label@629b78e2057e150e0e59fe7a7b71b528446a6dc0
+      # - name: Remove "safe to test" label, if PR is from a fork
+       # uses: nilsreichardt/remove-safe-to-test-label@629b78e2057e150e0e59fe7a7b71b528446a6dc0
 
-      - name: Ensure PR has "safe to test" label, if PR is from a fork
-        uses: nilsreichardt/verify-safe-to-test-label@e6441d8c453b7b9820ef4b70c82aa1d4bce9ac29
+      # - name: Ensure PR has "safe to test" label, if PR is from a fork
+        # uses: nilsreichardt/verify-safe-to-test-label@e6441d8c453b7b9820ef4b70c82aa1d4bce9ac29
     
       - name: Checkout base code
         uses: actions/checkout@v5

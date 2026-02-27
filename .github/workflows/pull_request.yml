@@ -11,7 +11,7 @@ jobs:
       pull-requests: write
     steps:
       - name: Ensure PR has "safe to test" label, if PR is from a fork
-        uses: nilsreichardt/verify-safe-to-test-label@70de0e0519db2edbd390acf8fe3174b0f1070eb8
+        uses: nilsreichardt/verify-safe-to-test-label@d99b8b2019308188eb7c0f332f9ab02932f58cc8
 
   install:
     needs: authenticate

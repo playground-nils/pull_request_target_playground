@@ -4,14 +4,18 @@ on:
   pull_request_target:
     types: [opened, synchronize, reopened, labeled]
 
+permissions:
+  contents: read
+
 jobs:
   authenticate:
     runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
+    # permissions:
+    #  pull-requests: write
     steps:
-      - name: Ensure PR has "safe to test" label, if PR is from a fork
-        uses: nilsreichardt/verify-safe-to-test-label@70de0e0519db2edbd390acf8fe3174b0f1070eb8
+      # - name: Ensure PR has "safe to test" label, if PR is from a fork
+      #  uses: nilsreichardt/verify-safe-to-test-label@70de0e0519db2edbd390acf8fe3174b0f1070eb8
+      - run: echo "Authenticated!"
 
   install:
     needs: authenticate

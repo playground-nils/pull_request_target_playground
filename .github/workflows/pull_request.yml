@@ -21,6 +21,8 @@ jobs:
     needs: authenticate
     runs-on: ubuntu-latest
     steps:
+      - run: echo "Hello Mars"
+    
       - name: Checkout base code
         uses: actions/checkout@v5
         with:
